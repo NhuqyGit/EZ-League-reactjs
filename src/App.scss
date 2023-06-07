@@ -1,0 +1,235 @@
+@import "./variables.scss";
+.header-container{
+    padding: 0 150px;
+    // background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    // width: 100vw;
+
+    
+    .header-head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            display: flex;
+            align-items: center;
+            font-size: 32px;
+            font-weight: 700;
+            span{
+                margin-left: 14px;
+                color: $blue;
+            }
+        }
+
+        .nav{
+            display: flex;
+            align-items: center;
+            ul{
+                display: flex;
+                
+                list-style: none;
+                li{
+                    margin-left: 30px;
+                    a{
+                        text-decoration: none;
+                        padding: 0 5px;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: gray;
+                    }
+
+                    .active{
+                        color: $blue-dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 90px;
+        .introduce{
+            h1{
+                font-family: 'Oxanium';
+                font-weight: 700;
+                font-size: 70px;
+                color: $blue-dark2;
+                margin: 0;
+            }
+    
+            p{
+                font-family: 'Oxanium';
+                font-weight: 500;
+                font-size: 22px;
+                margin: 30px 0;
+                height: 137px;
+                width: 518px;
+                letter-spacing: -0.3px;
+                display: flex;
+                align-items: center;
+                text-align: justify;
+            }
+    
+            button{
+                width: 154px;
+                height: 48px;
+                background: linear-gradient(121.86deg, #0049FC 23.04%, #00CBFE 97.21%);
+                border-radius: 8px;
+                font-family: 'Oxanium';
+                font-weight: 700;
+                font-size: 24px;
+                color: white;
+                border: none;
+            }
+        }
+
+        .slider-page{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 4px;
+            grid-template-rows: auto;
+            align-items: end;
+            margin: 0 10px 82px 10px;
+
+            .page{
+                width: 8px;
+                height: 8px;
+                background: #786F77;
+                border-radius: 8px;
+            }
+
+            .page-active{
+                width: 16px;
+                background-color: $blue-dark2;
+            }
+        }
+
+        .phoneAd{
+            img{
+                // height: 240px;
+            }
+        }
+    }
+}
+
+.main-container{
+    position: relative;
+    // height: 100vh;
+    padding: 100px 100px 0 100px;
+    height: 100%;
+    .sponsors{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        position: absolute;
+        top: -90px;
+        left: 10vw;
+        width: 80%;
+        height: 196px;
+        background: #FFFFFF;
+        box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.16);
+        border-radius: 16px;
+
+        span{
+            font-size: 24px;
+            // margin: 32px 0;
+            color: $black;
+        }
+
+        .sponsors-logo{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: 30px;
+            img{
+                height: 46px;
+                width: 131px;
+            }
+        }
+    }
+
+    .main-heading{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .span-fore{
+            font-family: 'Oxanium';
+            font-weight: 800;
+            font-size: 150px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #F8F8F8;
+        }
+
+        .span-back{
+            position: absolute;
+            font-weight: 500;
+            font-size: 53px;
+            color: $blue;
+            top: 90px;
+            text-align: center;
+        }
+
+        p{
+            position: absolute;
+            top: 170px;
+            font-size: 15px;
+            color: $gray;
+            text-align: center;
+            line-height: 26px;
+        }
+
+    }
+
+    .main-content{
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 13px;
+        row-gap: 13px;
+        height: 700px;
+
+        .func{
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            // border: solid 1px gray;
+            
+
+            .img-container{
+                border: solid 1px $blue-dark;
+                border: 1px solid rgba(0, 109, 187, 0.3);
+                backdrop-filter: blur(39px);
+                border-radius: 10px;
+                padding: 0 12px;
+            }
+
+            span{
+                margin: 16px 0 24px 0;
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                background: linear-gradient(to bottom, #006DBB 0%, #99D5FF 100%, #189FFF 100%);
+                width: calc(100% + 6px);
+                height: calc(100% + 6px);
+                top: -3px;
+                left: -3px;
+                z-index: -1;
+                border-radius: 12px;
+            }
+        }
+    }
+}
