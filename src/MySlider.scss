@@ -1,0 +1,102 @@
+@import "./variables.scss";
+.rv-content-container{
+    display: flex;
+    align-items: center;
+
+
+    .center-content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 24px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        padding-bottom: 37px;
+        margin: 23px 70px;
+        background: #F8F8F8;
+        .person-say{
+            width: 65%;
+            h4{
+                font-family: 'Padauk';
+                font-size: 160px;
+                font-weight: 400;
+                color: $blue;
+                max-height: 100px;
+            }
+            h5{
+                font-size: 24px;
+                font-weight: 600;
+                color: #29698F;
+                margin-bottom: 17px;
+            }
+            p{
+                line-height: 30px;
+                font-weight: 400;
+                font-size: 12px;
+                margin-bottom: 18px;
+                color: $p-black;
+            }
+            .per-name{
+                margin-bottom: 5px;
+                color: $blue-dark;
+            }
+            .per-profile{
+                margin-bottom: 70px;
+            }
+        }
+
+        .list-person{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .person-item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: $blue;
+                margin-right: 19px;
+                width: 51px;
+                height: 51px;
+                cursor: pointer;
+                img{
+                    width: 51px;
+                    height: 51px;
+                }
+
+                .per-active{
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+
+            
+        }
+    }
+}
+
+.slick-dots{
+    bottom: 50px;
+    li{
+        width: 51px;
+        height: 51px;
+        .person-item{
+            width: 51px;
+            height: 51px;
+            background: $blue;
+            border-radius: 50%;
+            img{
+                width: 51px;
+                height: 51px;
+            }
+        }
+    }
+    .slick-active {
+        img{
+            padding: 4px;
+            box-sizing: border-box;
+        }
+    }
+
+}
